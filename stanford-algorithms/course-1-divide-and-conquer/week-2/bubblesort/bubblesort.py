@@ -3,7 +3,7 @@ def bubblesort(arr):
     size = len(arr)
     changed = False
     for i in range(size):
-        for j in range(size-i-1):
+        for j in range(size-i):
             if result[j] > result[j+1]:
                 result[j], result[j+1] = result[j+1], result[j]
                 changed = True
