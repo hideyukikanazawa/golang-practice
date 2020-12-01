@@ -1,0 +1,35 @@
+Algorithms learned -
+1. Inversion counting 
+2. Strassen's subcubic matrix multiplication
+3. O(n logn) algorithm for Closest Pair problem
+
+
+MASTER METHOD
+Motivation - Potentially useful algorithmic ideas often need mathematical analysis to evaluate
+Assumptions - 
+1. All subproblems have the same size
+2. Blackbox method
+
+Recurrence Format
+1) Base case - T(n) <= c for all sufficiently small n
+2) For larger n:
+T(n) <= aT(n/b) [Recursive calls] + O(n^d) [Extra work]
+    a = No. of recursive calls                                                  (a >= 1)
+    b = Factor by which input size shrinks                                      (b > 1)
+    d = Exponent in running time of "combine step", outside of recursive calls  (d >= 0)
+
+-------------
+Master Method
+-------------
+            1) O(n^d logn)      if a = b^d
+T(n) =      2) O(n^d)           if a < b^d
+            3) O(n^logb(a))     if a > b^d
+
+--------------
+Proof - Part 1
+--------------
+There are a^j subproblems, each with size n/b^j
+Total work at level j   <=    a^j [# of level-j subproblems] *  c * [n/b^j]^d [Work per level-j subproblem]
+= cn^d * [a/b^d]^j
+
+Total work <= cn^d * SUMMATION(logb(n), j=0) [a/b^d]^j **

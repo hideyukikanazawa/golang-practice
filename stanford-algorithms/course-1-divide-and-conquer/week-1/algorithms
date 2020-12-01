@@ -1,0 +1,27 @@
+Recurrence
+- Base case [T(1) < c]
+- Running no. of recursive calls [T(n) < 4T(n/2) + O(n)]
+
+Divide & Conquer
+1. Divide problem into smaller sub-problems
+2. Conquer each sub-problem recursively
+3. Merge sub-problems into original problem <= Most innovation
+
+Big O Notation
+T(n) = O(f(n)) if and only if there exist constant c, n0 > 0 such that: 
+T(n) <= c*f(n) for all n > n0
+**Suppress constant factors & lower order terms
+
+Big Omega Notation
+T(n) = Om(f(n)) if and only if there exist constant c, n0 > 0 such that:
+T(n) >= c*f(n) for all  n > n0
+
+Big Theta Notation
+T(n) = th(f(n)) if and only if there exist constant c, n0 >0 such that:
+T(n) = O(f(n)) AND T(n) = Om(f(n))
+
+
+Algorithms learned - 
+1. Karatsuba integer multiplication
+2. Merge Sort
+3. Inversion counts using merge sort
