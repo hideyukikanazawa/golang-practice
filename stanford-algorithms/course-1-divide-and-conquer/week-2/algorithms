@@ -33,3 +33,18 @@ Total work at level j   <=    a^j [# of level-j subproblems] *  c * [n/b^j]^d [W
 = cn^d * [a/b^d]^j
 
 Total work <= cn^d * SUMMATION(logb(n), j=0) [a/b^d]^j **
+
+
+--------------
+Proof - Part 2
+--------------
+Our upper bound of work at level j:
+cn^d * (a/b^d)^j
+
+Interpretation
+=> a   = rate of subproblem proliferation           - RSP
+=> b^d = rate of work shrinkage (per subproblem)    - RWS
+
+1) RSP = RWS --> Same amount of work at each level (like merge sort)    [might expect O(n^dlogn)]
+2) RSP < RWS --> Less work each level, most work at the root            [might expect O(n^d)]
+3) RSP > RWS --> More work each level, most work at the leaves          [might expect O(#leaves)]
