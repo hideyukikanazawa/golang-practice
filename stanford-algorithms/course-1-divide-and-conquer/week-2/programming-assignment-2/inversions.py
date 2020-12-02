@@ -26,7 +26,7 @@ def mergesortinversions(arr):
 
 
 def main():
-    with open("D:\Downloads\IntegerArray.txt", "r") as istr:
+    with open("D:/Downloads/IntegerArray.txt", "r") as istr:
         output = [int(x.strip("\n")) for x in istr.readlines()]
     final, inv = mergesortinversions(output)
     print(f"Final:\t\t{final}")
