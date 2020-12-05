@@ -1,0 +1,33 @@
+--------- Quicksort ------------ 
+- "Greatest hit" algorithm
+- O(n logn) time on average, works in place
+
+Key idea: Partition array around a pivot element 
+- Pick element of array
+- Rearrange (random) such that 
+    - Left of pivot  => Less than pivot
+    - Right of pivot => More than pivot
+- Put pivot in the proper final position
+
+Partitioning
+1) Linear O(n) time, no extra memory
+2) Reduces problem size
+
+
+A) THE PARTITION SUBROUTINE
+[p | < p | > p | ? ]
+         i     j
+      split   boundary
+
+
+
+B) Choosing a good pivot
+Split array into two equally sized arrays
+
+- Random pivots
+* If always get 25-75 split, good enough for O(nlogn) running time 
+* Half of elements give a 25-75 split or better
+
+
+Quicksort Theorem: For every input array of length n, average running time (with random pivots) is O(nlogn)
+Holds for every input [no assumptions on data]
